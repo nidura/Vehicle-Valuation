@@ -1,0 +1,27 @@
+
+@media print{
+  .doPrint{display:flex !important;}
+
+  .dontPrint{display:none !important;}
+
+  .label{
+    font-size: 5px !important;
+  }
+}
+
+.doPrint{
+  display: none;
+}
+
+.form-group {
+    margin-bottom: 0rem;
+}
+.form-control-sm {
+    height: calc(1em + .5rem + 2px) !important;
+  }
+.col-form-label{
+  font-size: small !important;
+}
+label{
+  font-size: small !important;
+}
