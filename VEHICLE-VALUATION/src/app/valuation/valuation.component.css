@@ -25,3 +25,8 @@
 label{
   font-size: small !important;
 }
+.actionBtn{
+  text-align: end;
+  margin: 10px;
+  padding: 10px;
+}
