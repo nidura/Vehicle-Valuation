@@ -214,22 +214,22 @@
 <div class="col-md-6" style="margin-top:20px">
   <div style="display:flex">
     <div class="col-md-4">
+      <input class="dontPrint" type='file' (change)="onSelectFile($event)">
       <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <p>image 1</p>
+      <img class="card-img-top" [src]="image1" height="100" alt="image 1">
       </div>
     </div>
     <div class="col-md-4">
+      <input class="dontPrint" type='file' (change)="onSelectFile2($event)">
       <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-          <p>image 2</p>
+      <img class="card-img-top" [src]="image2" height="100" alt="image 2">
       </div>
     </div>
     <div class="col-md-4">
-        <div class="card" >
-          <img class="card-img-top" src="..." alt="Card image cap">
-            <p>image 3</p>
-        </div>
+      <input class="dontPrint" type='file' (change)="onSelectFile3($event)">
+      <div class="card">
+      <img class="card-img-top" [src]="image3" height="100" alt="image 3">
+      </div>
     </div>
   </div>
 </div>
