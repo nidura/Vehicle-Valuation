@@ -12,8 +12,4 @@ public class TyresAndWear {
   private String sizeQc;
   private String checked;
   private String passed;
-  private String ;
-  private String ;
-  private String ;
-  private String ;
 }
