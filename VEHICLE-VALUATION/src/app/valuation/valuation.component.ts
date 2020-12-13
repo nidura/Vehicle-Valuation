@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+// import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-valuation',
@@ -7,57 +7,89 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./valuation.component.css']
 })
 export class ValuationComponent {
-    image1 = '';
-    image2 = '';
-    image3 = '';
-    // contact : {id, name, description, email} = {id: null, name: "", description: "", email: ""};
+  image1: any;
+  image2: any;
+  image3: any;
+  image4: any;
 
-    constructor() { }
+  // contact : {id, name, description, email} = {id: null, name: "", description: "", email: ""};
 
-    createContact(){
-      // console.log(this.contact);
-      // this.dataService.createContact(this.contact);
-      // this.contact = {id: null, name: "", description: "", email: ""};
-
-    }
-
-    onPrint(){
-      window.print();
-    }
-
-
-    onSelectFile(event) {
-      if (event.target.files && event.target.files[0]) {
-     var reader = new FileReader();
-
-     reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-     reader.onload = (event) => { // called once readAsDataURL is completed
-       this.image1 = event.target.result;
-     }
-   }
- }
- onSelectFile2(event) {
-   if (event.target.files && event.target.files[0]) {
-  var reader = new FileReader();
-
-  reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-  reader.onload = (event) => { // called once readAsDataURL is completed
-    this.image2 = event.target.result;
+  constructor() {
   }
+
+  ngOnInit(): void {
+    // this.image1 = '';
   }
-}
-onSelectFile3(event) {
-  if (event.target.files && event.target.files[0]) {
- var reader = new FileReader();
 
- reader.readAsDataURL(event.target.files[0]); // read file as data url
+  createContact() {
+    // console.log(this.contact);
+    // this.dataService.createContact(this.contact);
+    // this.contact = {id: null, name: "", description: "", email: ""};
 
- reader.onload = (event) => { // called once readAsDataURL is completed
-   this.image3 = event.target.result;
- }
- }
-}
+  }
+
+  onPrint() {
+    window.print();
+  }
+
+  // tslint:disable-next-line:typedef
+  onSelectFile(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      // tslint:disable-next-line:no-shadowed-variable
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        // @ts-ignore
+        this.image1 = event.target.result;
+      };
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  onSelectFile2(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      // tslint:disable-next-line:no-shadowed-variable
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        // @ts-ignore
+        this.image2 = event.target.result;
+      };
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  onSelectFile3(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      // tslint:disable-next-line:no-shadowed-variable
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        // @ts-ignore
+        this.image3 = event.target.result;
+      };
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  onSelectFile4(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      // tslint:disable-next-line:no-shadowed-variable
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        // @ts-ignore
+        this.image4 = event.target.result;
+      };
+    }
+  }
 
 }

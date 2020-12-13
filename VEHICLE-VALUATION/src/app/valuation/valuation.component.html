@@ -1,20 +1,33 @@
 <div class="container-fluid">
-  <div class="form-group row doPrint">
-    <label for="tc" class="col-sm-5 col-form-label-sm">Report No: ........................................................................</label>
-  </div>
-  <div class="form-group row doPrint">
-    <label for="tc" class="col-sm-5 col-form-label-sm">Contact Person: ....................................................................</label>
+  <div class="mx-auto font-weight-bold text-center" style="margin-bottom:10px;margin-top: 3px">
+    <h3>VEHICLE INSPECTION AND VALUATION REPORT</h3>
   </div>
 
-  <div class="mx-auto font-weight-bold" style="width: 400px;margin-bottom:5px">
-    VEHICLE INSPECTION AND VALUATION REPORT
+  <div class="form-group row mt-3">
+    <label for="tc" class="col-sm-2 col-form-label-sm">Report No</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+    </div>
   </div>
+  <div class="form-group row">
+    <label for="tc" class="col-sm-2 col-form-label-sm">Contact Person</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+    </div>
+  </div>
+
   <form>
+    <div class="form-group row mb-2">
+      <label for="tc" class="col-sm-2 col-form-label-sm">Messrs</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control form-control-sm" id="ms" placeholder="">
+      </div>
+    </div>
     <div class="form-row doPrint">
-      <p>Messrs.............................................................................................................................................................................................................................................................................................
-      This Report is confidental and for guidlince of address only and not be used for any other purpose
-      or distributed to any other party or be published in any from inspection is necessarily superfical and no dismanting nor
-       reassembling of any machanism is implied nor accepted.</p>
+      <p>
+      This Report is confidential and for guideline of address only and not be used for any other purpose
+      or distributed to any other party or be published in any form inspection is necessarily superficial and no dismantling nor
+       reassembling of any mechanism is implied nor accepted.</p>
        <div class="form-group row">
          <label for="staticEmail" class="col-md-6 col-form-label-sm">Time of inspection</label>
          <div class="col-md-5">
@@ -70,8 +83,8 @@
     <div class="form-row">
       <div class="col-md-12 doPrint">
         <p>I hereby declare and affirm that i am the current owner of the vehicle indicated above and that the information
-          i have given concerning it is any from inspection is necessarily superfical and no dismanting nor
-           reassembling of any machanism is implied nor accepted.
+          i have given concerning it is any form inspection is necessarily superficial and no dismantling nor
+           reassembling of any mechanism is implied nor accepted.
         </p>
       </div>
 
@@ -130,12 +143,12 @@
 
   <!-- I hereby declare and affirm that i'm the current owner -->
 <div class="row">
-<div class="col-md-6">
-  <p class="font-weight-bold mb-0">TYRES & WEAR</p>
+<div class="col-md-4">
+  <p class="font-weight-bold mb-0" style="font-size: 14px">TYRES & WEAR</p>
   <div class="form-row">
     <div class="form-group col-md-2">
       <br>
-      <label for="type" class="col-form-label-sm" style="margin-top:9px">SIZE</label>
+      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;margin-top:9px" >SIZE</label>
     </div>
     <div class="form-group col-md-2">
         <label for="type"><br></label>
@@ -146,40 +159,21 @@
     <div class="form-group col-md-2">
     </div>
     <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">FRONT %</label>
-      <input type="text" class="form-control form-control-sm" style="margin-top: 6px" id="type" placeholder="">
+<!--      <label for="type" class="col-form-label-sm mb-2">FRONT %</label>-->
+      <label for="type">&nbsp;</label>
+      <input type="text" class="form-control form-control-sm"  id="type" placeholder="">
     </div>
     <div class="form-group col-md-2">
-      <label for="type"><br></label>
+      <label for="type">&nbsp;</label>
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">SIZE QC </label>
+      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE QC </label>
     </div>
     <div class="form-group col-md-2">
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">CHECKED</label>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">PASSED </label>
     </div>
     <div class="form-group col-md-2">
         <input type="text" class="form-control form-control-sm" id="type" placeholder="">
@@ -196,6 +190,27 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-2">
+      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">CHECKED</label>
+    </div>
+    <div class="form-group col-md-2">
+<!--      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label>-->
+    </div>
+    <div class="form-group col-md-2">
+        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label>
     </div>
     <div class="form-group col-md-2">
     </div>
@@ -204,32 +219,39 @@
     <div class="form-group col-md-2">
     </div>
     <div class="form-group col-md-2">
-    <label> SPARE %</label>
+    <label style="font-size: 12px !important;">SPARE%</label>
     </div>
     <div class="form-group col-md-2">
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
     </div>
   </div>
 </div>
-<div class="col-md-6" style="margin-top:20px">
+<div class="col-md-8" style="margin-top:5px">
   <div style="display:flex">
     <div class="col-md-4">
       <input class="dontPrint" type='file' (change)="onSelectFile($event)">
       <div class="card">
-      <img class="card-img-top" [src]="image1" height="100" alt="image 1">
+      <img class="card-img-top" [src]="image1" height="140" alt="image 1">
       </div>
     </div>
     <div class="col-md-4">
       <input class="dontPrint" type='file' (change)="onSelectFile2($event)">
       <div class="card">
-      <img class="card-img-top" [src]="image2" height="100" alt="image 2">
+      <img class="card-img-top" [src]="image2" height="140" alt="image 2">
       </div>
     </div>
     <div class="col-md-4">
       <input class="dontPrint" type='file' (change)="onSelectFile3($event)">
       <div class="card">
-      <img class="card-img-top" [src]="image3" height="100" alt="image 3">
+      <img class="card-img-top" [src]="image3" height="140" alt="image 3">
       </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <input class="dontPrint" type='file' (change)="onSelectFile4($event)">
+    <div class="card">
+      <img class="card-img-top" [src]="image4" height="60" width="300" alt="image 3">
     </div>
   </div>
 </div>
@@ -282,112 +304,220 @@
   </div>
   <div class="form-group col-md-2">
     <label for="type" class="col-form-label-sm">PAINT OR FISISH</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">Weathered</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    <div class="form-group">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected></option>
+        <option value="1">GOOD</option>
+        <option value="2">FAIR</option>
+        <option value="3">POOR</option>
+      </select>
+    </div>
   </div>
   <div class="form-group col-md-2">
     <label for="type" class="col-form-label-sm">BODY COLOUR</label>
     <input type="text" class="form-control form-control-sm" id="type" placeholder="">
   </div>
-  <div class="form-group col-md-2">
+  <div class="form-group col-md-3">
     <label for="type" class="col-form-label-sm">CHASSIS OR UNDERSIDE</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    <div class="form-group">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected></option>
+        <option value="1">GOOD</option>
+        <option value="2">FAIR</option>
+        <option value="3">POOR</option>
+      </select>
+    </div>
   </div>
-  <div class="form-group col-md-2">
+  <div class="form-group col-md-3">
     <label for="type" class="col-form-label-sm">COACH OR BODY WORK</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+<!--    <input type="text" class="form-control form-control-sm" id="type" placeholder="">-->
+    <div class="form-group">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected></option>
+        <option value="1">GOOD</option>
+        <option value="2">FAIR</option>
+        <option value="3">POOR</option>
+      </select>
+    </div>
   </div>
   </div>
 
 
 <div class="row">
   <div class="col-md-6">
-      <p class="font-weight-bold mb-0">GEAR BOX</p>
+      <p class="font-weight-bold mb-0" style="font-size: 14px">GEAR BOX</p>
     <div class="form-group row">
       <label for="tc" class="col-sm-6 col-form-label-sm">TRANSMISSION CLUTCH</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+<!--        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">-->
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="gb" class="col-sm-6 col-form-label-sm">GEAR BOX</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="gb" class="col-sm-6 col-form-label-sm">SHAFTIG</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="gb" class="col-sm-6 col-form-label-sm">DIFF</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="gb" class="col-sm-6 col-form-label-sm">G:SELECTION</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="gb" class="col-sm-6 col-form-label-sm">ROAD TEST DONE ON</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+        <input type="date" class="form-control form-control-sm" id="gb" placeholder="">
       </div>
     </div>
-
-      <p class="font-weight-bold mb-0">ELECTRICAL</p>
+    <p class="font-weight-bold mb-0" style="font-size: 14px">ELECTRICAL</p>
 
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">S. STARTER</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+          <div class="form-group">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected></option>
+              <option value="1">GOOD</option>
+              <option value="2">FAIR</option>
+              <option value="3">POOR</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">VIPERS</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+          <div class="form-group">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected></option>
+              <option value="1">GOOD</option>
+              <option value="2">FAIR</option>
+              <option value="3">POOR</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">OBLIGATORY LIGHTS</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+          <div class="form-group">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected></option>
+              <option value="1">GOOD</option>
+              <option value="2">FAIR</option>
+              <option value="3">POOR</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">HORNS</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+          <div class="form-group">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected></option>
+              <option value="1">GOOD</option>
+              <option value="2">FAIR</option>
+              <option value="3">POOR</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">MEETERS</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+          <div class="form-group">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected></option>
+              <option value="1">GOOD</option>
+              <option value="2">FAIR</option>
+              <option value="3">POOR</option>
+            </select>
+          </div>
         </div>
-      </div>
-
-      <p class="font-weight-bold mb-0">GENERAL MAINTENANCE STANDARD</p>
-
-      <div class="form-group row">
+      </div><p class="font-weight-bold mb-0" style="font-size: 14px">GENERAL MAINTENANCE STANDARD</p><div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">MECHANICAL</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+          <div class="form-group">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected></option>
+              <option value="1">GOOD</option>
+              <option value="2">FAIR</option>
+              <option value="3">POOR</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">COACH OR BODY WOORX</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+          <div class="form-group">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected></option>
+              <option value="1">GOOD</option>
+              <option value="2">FAIR</option>
+              <option value="3">POOR</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="form-group row">
@@ -397,65 +527,6 @@
         </div>
       </div>
 
-      <p class="font-weight-bold mb-0">AVAILABILITY OF BODY PARTS</p>
-
-      <div class="form-group row">
-        <label for="tc" class="col-sm-6 col-form-label-sm">BODY PARTS</label>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="g9">
-              <label class="form-check-label" for="g9">
-                AVAILABLE
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="g10">
-              <label class="form-check-label" for="g10">
-                SCARCE
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="tc" class="col-sm-6 col-form-label-sm">ENGINE PARTS</label>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="g11">
-              <label class="form-check-label" for="g11">
-                AVAILABLE
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="g12">
-              <label class="form-check-label" for="g12">
-                SCARCE
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="tc" class="col-sm-6 col-form-label-sm">ACCESSORIES</label>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="g13">
-              <label class="form-check-label" for="g13">
-                AVAILABLE
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="g13">
-              <label class="form-check-label" for="g13">
-                SCARCE
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">DATE OF IMPORT</label>
         <div class="col-sm-6">
@@ -486,13 +557,27 @@
     <div class="form-group row">
       <label for="tc" class="col-sm-6 col-form-label-sm">FRONT SUSPENSON</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="tc" class="col-sm-6 col-form-label-sm">REAR SUSPENSON</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
@@ -504,19 +589,27 @@
     <div class="form-group row">
       <label for="tc" class="col-sm-6 col-form-label-sm">FOOT BREAKE</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">FOOT BREAKE</label>
-      <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="tc" class="col-sm-6 col-form-label-sm">PARKING BREAKE</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected></option>
+            <option value="1">GOOD</option>
+            <option value="2">FAIR</option>
+            <option value="3">POOR</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group row">
@@ -619,55 +712,122 @@
       <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
     </div>
   </div>
+    <p class="font-weight-bold mb-0" style="font-size: 14px">AVAILABILITY OF BODY PARTS</p>
 
-  <div class="form-group row" style="margin-top:50px">
-    <label for="gb" class="col-sm-6 col-form-label-sm">ADITION COMMENTS</label>
-    <div class="col-sm-6">
-      <textarea class="form-control form-control-sm" name="name" rows="2" cols="10"></textarea>
-      <!-- <input type="text" class="form-control form-control-sm" id="gb" placeholder=""> -->
+    <div class="form-group row">
+      <label for="tc" class="col-sm-6 col-form-label-sm">BODY PARTS</label>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="g9">
+            <label class="form-check-label" for="g9">
+              AVAILABLE
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="g10">
+            <label class="form-check-label" for="g10">
+              SCARCE
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    <div class="form-group row">
+      <label for="tc" class="col-sm-6 col-form-label-sm">ENGINE PARTS</label>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="g11">
+            <label class="form-check-label" for="g11">
+              AVAILABLE
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="g12">
+            <label class="form-check-label" for="g12">
+              SCARCE
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="tc" class="col-sm-6 col-form-label-sm">ACCESSORIES</label>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="g13">
+            <label class="form-check-label" for="g13">
+              AVAILABLE
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="g13">
+            <label class="form-check-label" for="g13">
+              SCARCE
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+    <div class="">
+      <div class="form-group row" style="">
+        <label for="gb" class="col-sm-3 col-form-label-sm">ADITION COMMENTS</label>
+        <div class="col-sm-9">
+          <!--      <textarea class="form-control form-control-sm" name="name" rows="10" cols="50"></textarea>-->
+           <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
+<!--          <textarea class="form-control"></textarea>-->
+        </div>
+      </div>
+    </div>
 <div class="form-row border-top border-primary" style="padding-top:10px;">
   <div class="col-md-12">
-    <div class="form-group row">
+    <div class="form-group row font-weight-bold">
       <label for="tc" class="col-sm-3 col-form-label-sm">MARKET VALUE (Rs.)</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+      <div class="col-sm-3">
+        <input type="number" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
       </div>
-      <div class="col-sm-5">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+      <div class="col-sm-6">
+        <input type="text" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
       </div>
     </div>
   </div>
   <div class="col-md-12">
-    <div class="form-group row">
+    <div class="form-group row font-weight-bold">
       <label for="tc" class="col-sm-3 col-form-label-sm">FORCED SALE VALUE (Rs.)</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+      <div class="col-sm-3">
+        <input type="number" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
       </div>
-      <div class="col-sm-5">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+      <div class="col-sm-6">
+        <input type="text" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
       </div>
     </div>
   </div>
 </div>
 <div class="form-row doPrint">
-  <div class="col-md-12" style="margin-bottom:30px">
-    <p class="text-uppercase">declarations of valuer. i here by confirm that information started is correct as per
+  <div class="col-md-12">
+    <p class="text-uppercase" style="font-size: 13px !important; margin-bottom: 0">declarations of valuer. i here by confirm that information started is correct as per
     inspections made by me and to the best of my knowledge i also have given the above valuation after
    considering all relevant factors which affects the value of the vahicle to the best of my experience and knowledge</p>
   </div>
-  <div class="col-md-4" style="margin-bottom:100px">
+  <div class="col-md-3" style="font-size: 13px !important; margin-top:70px">
     <p class="text-uppercase">Signature of the valuer</p>
   </div>
-  <div class="col-md-4" style="margin-bottom:100px">
-    <p class="text-uppercase">Prepared</p>
+  <div class="col-md-2" style="font-size: 13px !important;margin-top:70px">
+
   </div>
-  <div class="col-md-4" style="margin-bottom:100px">
-    <p class="text-uppercase">Date</p>
+  <div class="col-md-3" style=" font-size: 13px !important; margin-top:70px">
+    <p class="text-uppercase">Prepared By</p>
+
   </div>
+  <div class="col-md-4">
+    <p class="text-uppercase" style="margin: 0">Date</p>
+    <img src="../../assets/Barcode.png" height="60"/>
+  </div>
+
 </div>
 
 <div class="actionBtn">
