@@ -7,6 +7,16 @@
   /*.label{*/
   /*  font-size: 5px !important;*/
   /*}*/
+  .selcton2 label{
+      border: 1px solid;
+  }
+  .removeInputBorder input{
+    border: 0px;
+  }
+  .hideInputBorder input{
+    border:0px;
+    border-bottom: dashed;
+  }
 }
 
 .doPrint{
@@ -26,6 +36,7 @@
 }
 label{
   font-size: medium !important;
+  font-weight: 500;
 }
 .actionBtn{
   text-align: end;
@@ -62,4 +73,7 @@ select {
   width: -webkit-fill-available;
   border: 1px solid black;
   color: black;
+}
+p{
+  font-weight: 500;
 }

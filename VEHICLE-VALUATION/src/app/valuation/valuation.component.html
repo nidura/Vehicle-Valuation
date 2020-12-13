@@ -1,48 +1,86 @@
 <div class="container-fluid">
-  <div class="mx-auto font-weight-bold text-center" style="margin-bottom:10px;margin-top: 3px">
+  <div class="mx-auto font-weight-bold text-center" style="margin-bottom:8px;margin-top: 3px">
     <h3>VEHICLE INSPECTION AND VALUATION REPORT</h3>
   </div>
-
-  <div class="form-group row mt-3">
-    <label for="tc" class="col-sm-2 col-form-label-sm">Report No</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="tc" class="col-sm-2 col-form-label-sm">Contact Person</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-    </div>
-  </div>
-
-  <form>
-    <div class="form-group row mb-2">
-      <label for="tc" class="col-sm-2 col-form-label-sm">Messrs</label>
-      <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="ms" placeholder="">
+  <div class="col-md-12 row">
+    <div class="col-md-10">
+      <div class="form-group row mt-3">
+        <label for="tc" class="col-sm-2 col-form-label-sm">Report No</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="tc" class="col-sm-2 col-form-label-sm">Contact Person</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label for="tc" class="col-sm-2 col-form-label-sm">Messrs</label>
+        <!-- <div class="col-sm-6">
+          <input type="text" class="form-control form-control-sm" id="ms" placeholder="">
+        </div> -->
+        <div class="col-sm-5">
+          <input type="text" class="form-control form-control-sm" style="border:0px; border-bottom:dashed" id="ms" placeholder="">
+        </div>
       </div>
     </div>
-    <div class="form-row doPrint">
-      <p>
+    <div class="col-md-2">
+      <label for="engno" class="col-form-label-sm">Compliance with</label>
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="c1">
+          <label class="form-check-label" for="c1">
+            CR
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="c2">
+          <label class="form-check-label" for="c2">
+            FCR
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="c3">
+          <label class="form-check-label" for="c3">
+            YES
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="c3">
+          <label class="form-check-label" for="c4">
+            NO
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <form>
+    <div class="col-md-12 form-row hideInputBorder">
+      <p class="doPrint">
       This Report is confidential and for guideline of address only and not be used for any other purpose
       or distributed to any other party or be published in any form inspection is necessarily superficial and no dismantling nor
        reassembling of any mechanism is implied nor accepted.</p>
        <div class="form-group row">
-         <label for="staticEmail" class="col-md-6 col-form-label-sm">Time of inspection</label>
-         <div class="col-md-5">
-           <input type="text"  class="form-control form-control-sm" id="staticEmail" value="">
+         <label for="staticEmail" class="col-md-5 col-form-label-sm">Time of inspection</label>
+         <div class="col-md-6">
+           <input type="text"  class="form-control form-control-sm"  id="toi" value="">
          </div>
        </div>
        <div class="form-group row">
          <label for="staticEmail" class="col-sm-6 col-form-label-sm">Place of inspection</label>
-         <div class="col-sm-5">
-           <input type="text"  class="form-control form-control-sm" id="staticEmail" value="">
+         <div class="col-sm-6">
+           <input type="text"  class="form-control form-control-sm" id="poi"  value="">
          </div>
        </div>
     </div>
 
-  <div class="form-row border-bottom border-primary" style="padding-bottom:10px;">
+  <div class="col-md-12 form-row border-bottom border-primary" style="padding-bottom:2px;">
     <div class="form-group col-md-2">
       <label for="regNo" class="col-form-label-sm">Reg No</label>
       <input type="text" class="form-control form-control-sm" id="regNo" placeholder="">
@@ -52,7 +90,11 @@
       <input type="text" class="form-control form-control-sm" id="make" placeholder="">
     </div>
     <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">Type</label>
+      <label for="type" class="col-form-label-sm">Model</label>
+      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="type" class="col-form-label-sm">Classification</label>
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
     </div>
     <div class="form-group col-md-2">
@@ -79,59 +121,51 @@
       <label for="bodylength" class="col-form-label-sm">body Length</label>
       <input type="text" class="form-control form-control-sm" id="bodylength" placeholder="">
     </div>
+    <div class="form-group col-md-2">
+      <label for="bodylength" class="col-form-label-sm">Doors</label>
+      <input type="text" class="form-control form-control-sm" id="bodylength" placeholder="">
+    </div>
+
+    <div class="form-group col-md-2">
+      <label for="bodylength" class="col-form-label-sm">Engine Capacity</label>
+      <input type="text" class="form-control form-control-sm" id="bodylength" placeholder="">
+    </div>
 
     <div class="form-row">
       <div class="col-md-12 doPrint">
-        <p>I hereby declare and affirm that i am the current owner of the vehicle indicated above and that the information
-          i have given concerning it is any form inspection is necessarily superficial and no dismantling nor
-           reassembling of any mechanism is implied nor accepted.
+        <p style="margin-bottom: 1px">I hereby declare and affirm that i am the current owner of the vehicle indicated above and that the information
+          i have given concerning it is correct to the best of my knowledge
         </p>
       </div>
 
       <div class="col-md-3 doPrint">
-        <div class="form-group" style="padding-bottom:20px">
+        <div class="form-group">
           <label for="type">Signature of Supplier/Owner</label>
-          <!-- <input type="text" class="form-control form-control-sm" id="type" placeholder=""> -->
+          <input type="text" class="form-control form-control-sm" style="border: 0px; border-bottom:dashed" id="type" placeholder="">
         </div>
       </div>
 
       <div class="col-md-9">
-        <div class="form-row doPrint">
-          <div class="form-group row">
-            <label for="staticEmail" class="col-sm-10 col-form-label-sm">Switch key to</label>
-            <div class="col-sm-5">
-              <!-- <input type="text"  class="form-control form-control-sm" id="staticEmail" value=""> -->
-            </div>
+        <div class="form-row removeInputBorder">
+          <div class="form-group col-md-3">
+            <label for="mr" class="col-form-label-sm">Odo-meter Reading</label>
+            <input type="text" class="form-control form-control-sm" id="mr" placeholder="">
           </div>
-          <div class="form-group row">
-            <label for="staticEmail" class="col-sm-12 col-form-label-sm">Odo-meter Reading</label>
-            <div class="col-sm-5">
-              <!-- <input type="text"  class="form-control form-control-sm" id="staticEmail" value=""> -->
-            </div>
+          <div class="form-group col-md-2">
+            <label for="mdate" class="col-form-label-sm">Date</label>
+            <input type="text" class="form-control form-control-sm" id="mdate" placeholder="">
           </div>
-          <div class="form-group row">
-            <label for="staticEmail" class="col-sm-10 col-form-label-sm">Name</label>
-            <div class="col-sm-5">
-              <!-- <input type="text"  class="form-control form-control-sm" id="staticEmail" value=""> -->
-            </div>
+          <div class="form-group col-md-3">
+            <label for="oname" class="col-form-label-sm">Name</label>
+            <input type="text" class="form-control form-control-sm" id="oname" placeholder="">
           </div>
-          <div class="form-group row">
-            <label for="staticEmail" class="col-sm-10 col-form-label-sm">Vendor/Owner</label>
-            <div class="col-sm-7">
-              <!-- <input type="text"  class="form-control form-control-sm" id="staticEmail" value=""> -->
-            </div>
+          <div class="form-group col-md-2">
+            <label for="oname" class="col-form-label-sm">Previous Owners</label>
+            <input type="text" class="form-control form-control-sm" id="oname" placeholder="">
           </div>
-          <div class="form-group row">
-            <label for="staticEmail" class="col-sm-10 col-form-label-sm">Date</label>
-            <div class="col-sm-7">
-              <!-- <input type="text"  class="form-control form-control-sm" id="staticEmail" value=""> -->
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="staticEmail" class="col-sm-10 col-form-label-sm">Privious Owners</label>
-            <div class="col-sm-5">
-              <!-- <input type="text"  class="form-control form-control-sm" id="staticEmail" value=""> -->
-            </div>
+          <div class="form-group col-md-2">
+            <label for="oname" class="col-form-label-sm">Vendor/Owner</label>
+            <input type="text" class="form-control form-control-sm" id="oname" placeholder="">
           </div>
         </div>
 
@@ -142,58 +176,50 @@
   </div>
 
   <!-- I hereby declare and affirm that i'm the current owner -->
-<div class="row">
+<div class="col-md-12 row">
 <div class="col-md-4">
   <p class="font-weight-bold mb-0" style="font-size: 14px">TYRES & WEAR</p>
   <div class="form-row">
     <div class="form-group col-md-2">
-      <br>
-      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;margin-top:9px" >SIZE</label>
     </div>
     <div class="form-group col-md-2">
-        <label for="type"><br></label>
+    </div>
+    <div class="form-group col-md-2">
+    </div>
+    <div class="form-group col-md-2">
+    </div>
+    <div class="form-group col-md-2">
+         <label for="type" class="col-form-label-sm mb-2">FRONT</label>
+    </div>
+    <div class="form-group col-md-2">
+    </div>
+  </div>
+  <div class="form-row mb-0">
+    <div class="form-group col-md-2">
+      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;" >SIZE</label>
+    </div>
+    <div class="form-group col-md-2">
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
     </div>
     <div class="form-group col-md-2">
+       <label for="type" class="col-form-label-sm mb-2">REAR</label>
     </div>
     <div class="form-group col-md-2">
     </div>
     <div class="form-group col-md-2">
-<!--      <label for="type" class="col-form-label-sm mb-2">FRONT %</label>-->
-      <label for="type">&nbsp;</label>
+      <!-- <label for="type">&nbsp;</label> -->
       <input type="text" class="form-control form-control-sm"  id="type" placeholder="">
     </div>
     <div class="form-group col-md-2">
-      <label for="type">&nbsp;</label>
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
     </div>
   </div>
-  <div class="form-row">
+  <div class="form-row  mb-1">
     <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE QC </label>
+      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE </label>
     </div>
     <div class="form-group col-md-2">
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">CHECKED</label>
-    </div>
-    <div class="form-group col-md-2">
-<!--      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label>-->
     </div>
     <div class="form-group col-md-2">
         <input type="text" class="form-control form-control-sm" id="type" placeholder="">
@@ -208,11 +234,32 @@
       <input type="text" class="form-control form-control-sm" id="type" placeholder="">
     </div>
   </div>
-  <div class="form-row">
+  <div class="form-row  mb-1">
     <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label>
+        <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">QC </label>
     </div>
     <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">CHECKED</label>
+    </div>
+    <div class="form-group col-md-2">
+        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <!-- <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label> -->
+    </div>
+    <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label>
     </div>
     <div class="form-group col-md-2">
     </div>
@@ -256,13 +303,24 @@
   </div>
 </div>
 </div>
-<div class="form-row">
+<div class="col-md-12 form-row">
   <div class="form-group col-md-2">
     <label for="type" class="col-form-label-sm">ENGINE MOTOR</label>
     <input type="text" class="form-control form-control-sm" id="type" placeholder="">
   </div>
   <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">TYPE</label>
+    <label for="type" class="col-form-label-sm">TYPE OF FUEL</label>
+    <div class="form-group">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected></option>
+        <option value="1">PATROL</option>
+        <option value="2">DIESEL</option>
+        <option value="3">GASS</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="type" class="col-form-label-sm">FUAL TYPE</label>
     <input type="text" class="form-control form-control-sm" id="type" placeholder="">
   </div>
   <div class="form-group col-md-2">
@@ -272,6 +330,46 @@
   <div class="form-group col-md-2">
     <label for="type" class="col-form-label-sm">RE-BUILT ON</label>
     <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+  </div>
+  </div>
+  <div class="col-md-12 form-row">
+  <div class="form-group col-md-2">
+    <label for="type" class="col-form-label-sm">PAINT OR FISISH</label>
+    <div class="form-group">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected></option>
+        <option value="1">GOOD</option>
+        <option value="2">FAIR</option>
+        <option value="3">POOR</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="type" class="col-form-label-sm">BODY COLOUR</label>
+    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
+  </div>
+  <div class="form-group col-md-2">
+    <label for="type" class="col-form-label-sm">CHASSIS OR UNDERSIDE</label>
+    <div class="form-group">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected></option>
+        <option value="1">GOOD</option>
+        <option value="2">FAIR</option>
+        <option value="3">POOR</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="type" class="col-form-label-sm">COACH OR BODY WORK</label>
+<!--    <input type="text" class="form-control form-control-sm" id="type" placeholder="">-->
+    <div class="form-group">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected></option>
+        <option value="1">GOOD</option>
+        <option value="2">FAIR</option>
+        <option value="3">POOR</option>
+      </select>
+    </div>
   </div>
   <div class="form-group col-md-3">
     <label for="type" class="col-form-label-sm">INTERNAL TRIM</label>
@@ -297,53 +395,10 @@
     </div>
   </div>
   </div>
-  <div class=form-row>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">Searviceble</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">PAINT OR FISISH</label>
-    <div class="form-group">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected></option>
-        <option value="1">GOOD</option>
-        <option value="2">FAIR</option>
-        <option value="3">POOR</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">BODY COLOUR</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  <div class="form-group col-md-3">
-    <label for="type" class="col-form-label-sm">CHASSIS OR UNDERSIDE</label>
-    <div class="form-group">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected></option>
-        <option value="1">GOOD</option>
-        <option value="2">FAIR</option>
-        <option value="3">POOR</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group col-md-3">
-    <label for="type" class="col-form-label-sm">COACH OR BODY WORK</label>
-<!--    <input type="text" class="form-control form-control-sm" id="type" placeholder="">-->
-    <div class="form-group">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected></option>
-        <option value="1">GOOD</option>
-        <option value="2">FAIR</option>
-        <option value="3">POOR</option>
-      </select>
-    </div>
-  </div>
-  </div>
 
 
-<div class="row">
+
+<div class="col-md-12 row selcton2">
   <div class="col-md-6">
       <p class="font-weight-bold mb-0" style="font-size: 14px">GEAR BOX</p>
     <div class="form-group row">
@@ -520,13 +575,6 @@
           </div>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">EXTRAS</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
-        </div>
-      </div>
-
       <div class="form-group row">
         <label for="gb" class="col-sm-6 col-form-label-sm">DATE OF IMPORT</label>
         <div class="col-sm-6">
@@ -773,17 +821,21 @@
     </div>
   </div>
 </div>
-    <div class="">
-      <div class="form-group row" style="">
-        <label for="gb" class="col-sm-3 col-form-label-sm">ADITION COMMENTS</label>
-        <div class="col-sm-9">
-          <!--      <textarea class="form-control form-control-sm" name="name" rows="10" cols="50"></textarea>-->
-           <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
-<!--          <textarea class="form-control"></textarea>-->
-        </div>
+<div class="col-md-12 row">
+<div class="col-md-12 ">
+  <div class="form-group row font-weight-bold selcton2">
+      <label for="gb" class="col-sm-3 col-form-label-sm font-weight-bold">EXTRAS</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control form-control-sm font-weight-bold" id="gb" placeholder="">
       </div>
+    <label for="tc" class="col-sm-3 col-form-label-sm font-weight-bold">ADITION COMMENTS</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-sm font-weight-bold" style="height:50px" id="tc" placeholder="">
     </div>
-<div class="form-row border-top border-primary" style="padding-top:10px;">
+  </div>
+</div>
+</div>
+<div class="col-md-12 row border-top border-primary" style="padding-top:10px;">
   <div class="col-md-12">
     <div class="form-group row font-weight-bold">
       <label for="tc" class="col-sm-3 col-form-label-sm">MARKET VALUE (Rs.)</label>
@@ -807,9 +859,9 @@
     </div>
   </div>
 </div>
-<div class="form-row doPrint">
+<div class="col-md-12 row doPrint">
   <div class="col-md-12">
-    <p class="text-uppercase" style="font-size: 13px !important; margin-bottom: 0">declarations of valuer. i here by confirm that information started is correct as per
+    <p class="text-uppercase" style="font-size: 13px !important; margin-bottom: 0">declarations of valuer. i here by confirm that information stated is correct as per
     inspections made by me and to the best of my knowledge i also have given the above valuation after
    considering all relevant factors which affects the value of the vahicle to the best of my experience and knowledge</p>
   </div>
