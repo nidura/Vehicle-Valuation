@@ -18,7 +18,11 @@
     border-bottom: dashed;
   }
   .table-bordered td, .table-bordered th {
-      border: 1px solid #000000;
+      border: 1px solid black !important;
+  }
+  .container-lm {
+    margin-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -83,10 +87,13 @@ p{
 .topTable th, .topTable td {
   font-size: 12px;
   padding: 0.20rem !important;
+  border: 1px solid black !important;
 }
 .table-bordered{
   margin-bottom: 0px !important;
+  border: 1px solid black !important;
 }
+
 img{
   border: 1px solid !important;
 }
