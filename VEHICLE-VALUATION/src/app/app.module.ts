@@ -4,6 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // Import ngx-barcode module
 import { NgxBarcodeModule } from 'ngx-barcode';
+import { QrCodeModule } from 'ng-qrcode';
 
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
@@ -23,7 +24,8 @@ import {HeaderComponent} from './header/header.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxBarcodeModule
+    NgxBarcodeModule,
+    QrCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
