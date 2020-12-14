@@ -20,6 +20,9 @@
   .table-bordered td, .table-bordered th {
       border: 1px solid black !important;
   }
+  .table {
+    padding-right: 20px !important;
+  }
   .container-lm {
     margin-left: 20px;
     padding-right: 20px;

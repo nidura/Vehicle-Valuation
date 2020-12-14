@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid container-lm">
   <div class="mx-auto font-weight-bold text-center" style="margin-bottom:8px;margin-top: 3px">
     <h3>VEHICLE INSPECTION AND VALUATION REPORT</h3>
   </div>
@@ -7,7 +7,7 @@
       <div class="form-group row mt-3">
         <label for="tc" class="col-sm-2 col-form-label-sm">Report No</label>
         <div class="col-sm-3">
-          <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="reportNo" id="reportNo" placeholder="">
         </div>
       </div>
       <div class="form-group row">
@@ -149,7 +149,7 @@
       </div>
 
       <div class="col-md-9">
-        <div class="form-row removeInputBorder">
+        <div class="form-row removeInputBorder" style="padding-right: 10px">
           <table class="table table-bordered">
   <thead class="topTable">
     <tr>
@@ -899,7 +899,7 @@
   </div>
   <div class="col-md-4 text-center">
     <p class="text-uppercase " style="margin: 0">Date</p>
-    <ngx-barcode [bc-value]="barcodeValue" [bc-height]="60" [bc-display-value]="false"></ngx-barcode>
+    <ngx-barcode [bc-value]="reportNo" [bc-height]="60" [bc-display-value]="false"></ngx-barcode>
     <!-- <img src="../../assets/Barcode.png" height="60"/> -->
   </div>
 

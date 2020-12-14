@@ -11,8 +11,10 @@ export class ValuationComponent {
   image2: any;
   image3: any;
   image4: any;
-  barcodeValue : any;
+  barcodeValue: any;
   regNo: any;
+
+  reportNo: any;
 
   // contact : {id, name, description, email} = {id: null, name: "", description: "", email: ""};
 
@@ -20,8 +22,6 @@ export class ValuationComponent {
   }
 
   ngOnInit(): void {
-    // this.image1 = '';
-    this.barcodeValue = "textTest"
   }
 
   createContact() {
