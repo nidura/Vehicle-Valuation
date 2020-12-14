@@ -878,7 +878,7 @@
     </div>
   </div>
 </div>
-<div class="form-row doPrint">
+<div class="form-row">
   <div class="col-md-12">
     <p class="text-uppercase" style="font-size: 13px !important; margin-bottom: 0">declarations of valuer. i here by confirm that information stated is correct as per
     inspections made by me and to the best of my knowledge i also have given the above valuation after
@@ -894,9 +894,10 @@
     <p class="text-uppercase">Prepared By</p>
 
   </div>
-  <div class="col-md-4">
-    <p class="text-uppercase" style="margin: 0">Date</p>
-    <img src="../../assets/Barcode.png" height="60"/>
+  <div class="col-md-4 text-center">
+    <p class="text-uppercase " style="margin: 0">Date</p>
+    <ngx-barcode [bc-value]="barcodeValue" [bc-height]="60" [bc-display-value]="false"></ngx-barcode>
+    <!-- <img src="../../assets/Barcode.png" height="60"/> -->
   </div>
 
 </div>
