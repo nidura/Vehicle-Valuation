@@ -19,25 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd16272-cadb-4e02-b764-a994b17e287a" name="Default Changelist" comment="update css">
-      <change afterPath="$PROJECT_DIR$/src/assets/Barcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/DoctorChannelApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/controller/ValuationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/entity/TyresAndWear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/entity/Valuation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/security/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/security/controller/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/security/dao/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/security/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/security/services/AppUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/java/lk/mjmotors/valuation/security/util/CustomErrorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../valuation-backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+    <list default="true" id="6bd16272-cadb-4e02-b764-a994b17e287a" name="Default Changelist" comment="initial backend commit and alignment updates">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/valuation/valuation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/valuation/valuation.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/valuation/valuation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/valuation/valuation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/valuation/valuation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/valuation/valuation.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +97,10 @@
       <option name="presentableId" value="Default" />
       <updated>1607656884658</updated>
       <workItem from="1607656885742" duration="6990000" />
-      <workItem from="1607823706012" duration="19543000" />
+      <workItem from="1607823706012" duration="19977000" />
+      <workItem from="1607915444848" duration="32000" />
+      <workItem from="1607919262048" duration="1251000" />
+      <workItem from="1607922814771" duration="709000" />
     </task>
     <task id="LOCAL-00001" summary="update css">
       <created>1607661713979</created>
@@ -121,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607661713979</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial backend commit and alignment updates">
+      <created>1607881534081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607881534081</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,25 +136,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update css" />
-    <option name="LAST_COMMIT_MESSAGE" value="update css" />
+    <MESSAGE value="initial backend commit and alignment updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial backend commit and alignment updates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1607824402488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824402488" />
+    <state x="184" y="85" key="MergeDialog" timestamp="1607922916599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="85" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607922916599" />
     <state x="783" y="222" key="RollbackChangesDialog" timestamp="1607841559670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="783" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607841559670" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607661826955">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607881542370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607661826955" />
-    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607823721269">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607881542370" />
+    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607922853994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607823721269" />
+    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607922853994" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607851214528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
