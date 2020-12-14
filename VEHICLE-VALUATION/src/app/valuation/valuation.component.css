@@ -85,8 +85,10 @@ p{
   padding: 0.20rem !important;
 }
 .table-bordered{
-  border: 1px solid black !important;
   margin-bottom: 0px !important;
+}
+img{
+  border: 1px solid !important;
 }
 /* .table-bordered td, .table-bordered th {
     border: 1px solid #000000;
