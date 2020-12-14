@@ -147,7 +147,27 @@
 
       <div class="col-md-9">
         <div class="form-row removeInputBorder">
-          <div class="form-group col-md-3">
+          <table class="table table-bordered">
+  <thead class="topTable">
+    <tr>
+      <th scope="col">Odo-meter Reading</th>
+      <th scope="col">Date</th>
+      <th scope="col">Name</th>
+      <th scope="col">Previous Owners</th>
+      <th scope="col">Vendor/Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="topTable">
+      <th scope="row"><input type="text" class="form-control form-control-sm" id="mr" placeholder=""></th>
+      <td><input type="text" class="form-control form-control-sm" id="mdate" placeholder=""></td>
+      <td><input type="text" class="form-control form-control-sm" id="oname" placeholder=""></td>
+      <td><input type="text" class="form-control form-control-sm" id="oname" placeholder=""></td>
+      <td><input type="text" class="form-control form-control-sm" id="oname" placeholder=""></td>
+    </tr>
+  </tbody>
+</table>
+          <!-- <div class="form-group col-md-3">
             <label for="mr" class="col-form-label-sm">Odo-meter Reading</label>
             <input type="text" class="form-control form-control-sm" id="mr" placeholder="">
           </div>
@@ -166,7 +186,7 @@
           <div class="form-group col-md-2">
             <label for="oname" class="col-form-label-sm">Vendor/Owner</label>
             <input type="text" class="form-control form-control-sm" id="oname" placeholder="">
-          </div>
+          </div> -->
         </div>
 
       </div>
@@ -594,7 +614,7 @@
       </div>
   </div>
 
-  <div class="col-md-6" style="margin-top: 23px">
+  <div class="col-md-6" style="margin-top:30px">
     <div class="form-group row">
       <label for="tc" class="col-sm-6 col-form-label-sm">FUEL CONS</label>
       <div class="col-sm-6">
@@ -875,7 +895,7 @@
 
   </div>
   <div class="col-md-4">
-    <p class="text-uppercase" style="margin: 0; font-size: 13px">Date</p>
+    <p class="text-uppercase" style="margin: 0">Date</p>
     <img src="../../assets/Barcode.png" height="60"/>
   </div>
 

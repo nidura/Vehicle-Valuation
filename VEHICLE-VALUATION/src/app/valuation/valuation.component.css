@@ -17,6 +17,9 @@
     border:0px;
     border-bottom: dashed;
   }
+  .table-bordered td, .table-bordered th {
+      border: 1px solid #000000;
+  }
 }
 
 .doPrint{
@@ -77,3 +80,17 @@ select {
 p{
   font-weight: 480;
 }
+.topTable th, .topTable td {
+  font-size: 12px;
+  padding: 0.20rem !important;
+}
+.table-bordered{
+  border: 1px solid black !important;
+  margin-bottom: 0px !important;
+}
+/* .table-bordered td, .table-bordered th {
+    border: 1px solid #000000;
+} */
+/* .table td, .table th{
+
+} */
