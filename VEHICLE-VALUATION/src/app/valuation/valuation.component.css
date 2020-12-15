@@ -1,4 +1,9 @@
 
+@page {
+    size: legal;
+    /* margin: 10%; */
+}
+
 @media print{
   .doPrint{display:flex !important;}
 

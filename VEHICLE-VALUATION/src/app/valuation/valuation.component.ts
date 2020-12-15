@@ -48,7 +48,7 @@ export class ValuationComponent {
   }
 
   onPrint() {
-    // window.print();
+    window.print();
   }
 
   // tslint:disable-next-line:typedef
