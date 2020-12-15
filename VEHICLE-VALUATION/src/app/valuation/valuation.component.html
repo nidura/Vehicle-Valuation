@@ -1,28 +1,29 @@
-<div class="container-fluid container-lm">
-  <div class="mx-auto font-weight-bold text-center" style="margin-bottom:8px;margin-top: 3px">
+<div class="container-fluid">
+  <div class="mx-auto font-weight-bold text-center" style="margin-bottom:8px;">
     <h3>VEHICLE INSPECTION AND VALUATION REPORT</h3>
   </div>
   <div class="form-row">
     <div class="col-md-8">
       <div class="form-group row mt-3">
-        <label for="tc" class="col-sm-2 col-form-label-sm">Report No</label>
+        <label for="tc" class="col-sm-3 col-form-label-sm">Report No</label>
         <div class="col-sm-3">
-          <input type="text" class="form-control form-control-sm" [(ngModel)]="reportNo" id="reportNo" placeholder="">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.reportNo" name="reportNo" placeholder="">
         </div>
       </div>
       <div class="form-group row">
-        <label for="tc" class="col-sm-2 col-form-label-sm">Contact Person</label>
+        <label for="tc" class="col-sm-3 col-form-label-sm">Contact Person</label>
         <div class="col-sm-3">
-          <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.contactPerson" name="tc1" placeholder="">
         </div>
       </div>
       <div class="form-group row mb-2">
-        <label for="tc" class="col-sm-2 col-form-label-sm">Messrs</label>
+        <label for="tc" class="col-sm-3 col-form-label-sm">Messrs</label>
         <!-- <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="ms" placeholder="">
+          <input type="text" class="form-control form-control-sm" name="ms" placeholder="">
         </div> -->
         <div class="col-sm-5">
-          <input type="text" class="form-control form-control-sm" style="border:0px; border-bottom:dashed" id="ms" placeholder="">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.messrs" style="border:0px; border-bottom:dashed" name="ms"
+                 placeholder="">
         </div>
       </div>
     </div>
@@ -30,13 +31,13 @@
       <label for="engno" class="col-form-label-sm">Compliance with</label>
       <div class="form-group">
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="c1">
+          <input class="form-check-input" type="checkbox" name="c1">
           <label class="form-check-label" for="c1">
             CR
           </label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="c2">
+          <input class="form-check-input" type="checkbox" name="c2">
           <label class="form-check-label" for="c2">
             FCR
           </label>
@@ -44,13 +45,13 @@
       </div>
       <div class="form-group">
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="c3">
+          <input class="form-check-input" type="checkbox" name="c3">
           <label class="form-check-label" for="c3">
             YES
           </label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="c3">
+          <input class="form-check-input" type="checkbox" name="c3">
           <label class="form-check-label" for="c4">
             NO
           </label>
@@ -62,852 +63,798 @@
     </div>
   </div>
 
-
   <form>
     <div class="form-row hideInputBorder">
       <p class="mb-0 doPrint">
-      This Report is confidential and for guideline of address only and not be used for any other purpose
-      or distributed to any other party or be published in any form inspection is necessarily superficial and no dismantling nor
-       reassembling of any mechanism is implied nor accepted.</p>
-       <div class="form-group row mp-0">
-         <label for="staticEmail" class="col-md-5 col-form-label-sm">Time of inspection</label>
-         <div class="col-md-6">
-           <input type="text"  class="form-control form-control-sm"  id="toi" value="">
-         </div>
-       </div>
-       <div class="form-group row mp-0">
-         <label for="staticEmail" class="col-sm-6 col-form-label-sm">Place of inspection</label>
-         <div class="col-sm-6">
-           <input type="text"  class="form-control form-control-sm" id="poi"  value="">
-         </div>
-       </div>
+        This Report is confidential and for guideline of address only and not be used for any other purpose
+        or distributed to any other party or be published in any form inspection is necessarily superficial and no
+        dismantling nor
+        reassembling of any mechanism is implied nor accepted.</p>
+      <div class="form-group row mp-0">
+        <label for="staticEmail" class="col-md-5 col-form-label-sm">Time of inspection</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.timeOfInspection" name="toi" value="">
+        </div>
+      </div>
+      <div class="form-group row mp-0">
+        <label for="staticEmail" class="col-sm-6 col-form-label-sm">Place of inspection</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.placeOfInspection" name="poi" value="">
+        </div>
+      </div>
     </div>
 
-  <div class="form-row border-bottom border-primary" style="padding-bottom:2px;">
-    <div class="form-group col-md-2">
-      <label for="regNo" class="col-form-label-sm">Reg No</label>
-      <input type="text" class="form-control form-control-sm" id="regNo" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="make" class="col-form-label-sm">Make</label>
-      <input type="text" class="form-control form-control-sm" id="make" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">Model</label>
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">Classification</label>
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="year" class="col-form-label-sm">Year</label>
-      <input type="text" class="form-control form-control-sm" id="year" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="engno" class="col-form-label-sm">Eng no/Motor No</label>
-      <input type="text" class="form-control form-control-sm" id="engno" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="Chassis" class="col-form-label-sm">Chassis</label>
-      <input type="text" class="form-control form-control-sm" id="Chassis" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="dof" class="col-form-label-sm">Date of Reg</label>
-      <input type="text" class="form-control form-control-sm" id="dof" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm">Country Of Origin</label>
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="bodylength" class="col-form-label-sm">body Length</label>
-      <input type="text" class="form-control form-control-sm" id="bodylength" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="bodylength" class="col-form-label-sm">Doors</label>
-      <input type="text" class="form-control form-control-sm" id="bodylength" placeholder="">
+    <div class="form-row border-bottom border-primary" style="padding-bottom:2px;">
+      <div class="form-group col-md-2">
+        <label for="regNo" class="col-form-label-sm">Reg No</label>
+        <input type="text" class="form-control form-control-sm" name="regNo" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="make" class="col-form-label-sm">Make</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.make" name="make" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">Model</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.model" name="type" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">Classification</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.classification" name="type" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="year" class="col-form-label-sm">Year</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.year" name="year" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="engno" class="col-form-label-sm">Eng no/Motor No</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.engNoOrMotorNo" name="engno" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="Chassis" class="col-form-label-sm">Chassis</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.chassis" name="Chassis" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="dof" class="col-form-label-sm">Date of Reg</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.dateOfReg" name="dof" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">Country Of Origin</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.countryOfOrigin" name="type" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="bodylength" class="col-form-label-sm">body Length</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.bodyLength" name="bodylength" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="bodylength" class="col-form-label-sm">Doors</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.doors" name="bodylength" placeholder="">
+      </div>
+
+      <div class="form-group col-md-2">
+        <label for="bodylength" class="col-form-label-sm">Engine Capacity</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.engineCapacity" name="bodylength" placeholder="">
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-12 doPrint">
+          <p style="margin-bottom: 1px">I hereby declare and affirm that i am the current owner of the vehicle indicated
+            above and that the information
+            i have given concerning it is correct to the best of my knowledge
+          </p>
+        </div>
+
+        <div class="col-md-3 doPrint">
+          <div class="form-group">
+            <label for="type">Signature of Supplier/Owner</label>
+            <input type="text" class="form-control form-control-sm" style="border: 0px; border-bottom:dashed" name="type"
+                   placeholder="">
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="form-row removeInputBorder">
+            <table class="table table-bordered">
+              <thead class="topTable">
+              <tr>
+                <th scope="col" width="20%">Odo-meter Reading</th>
+                <th scope="col" width="15%">Date</th>
+                <th scope="col" width="25%">Name</th>
+                <th scope="col" width="15%">Pre Owners</th>
+                <th scope="col" width="20%">Vendor/Owner</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="topTable">
+                <th scope="row"><input type="text" class="form-control form-control-sm" name="mr" placeholder=""></th>
+                <td><input type="text" class="form-control form-control-sm" name="mdate" placeholder=""></td>
+                <td><input type="text" class="form-control form-control-sm" name="oname1" placeholder=""></td>
+                <td><input type="text" class="form-control form-control-sm" name="oname2" placeholder=""></td>
+                <td><input type="text" class="form-control form-control-sm" name="oname3" placeholder=""></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="form-group col-md-2">
-      <label for="bodylength" class="col-form-label-sm">Engine Capacity</label>
-      <input type="text" class="form-control form-control-sm" id="bodylength" placeholder="">
-    </div>
-
+    <!-- I hereby declare and affirm that i'm the current owner -->
     <div class="form-row">
-      <div class="col-md-12 doPrint">
-        <p style="margin-bottom: 1px">I hereby declare and affirm that i am the current owner of the vehicle indicated above and that the information
-          i have given concerning it is correct to the best of my knowledge
-        </p>
-      </div>
-
-      <div class="col-md-3 doPrint">
-        <div class="form-group">
-          <label for="type">Signature of Supplier/Owner</label>
-          <input type="text" class="form-control form-control-sm" style="border: 0px; border-bottom:dashed" id="type" placeholder="">
-        </div>
-      </div>
-
-      <div class="col-md-9">
-        <div class="form-row removeInputBorder" style="padding-right: 10px">
-          <table class="table table-bordered">
-  <thead class="topTable">
-    <tr>
-      <th scope="col" width="20%">Odo-meter Reading</th>
-      <th scope="col" width="15%">Date</th>
-      <th scope="col" width="30%">Name</th>
-      <th scope="col" width="15%">Previous Owners</th>
-      <th scope="col" width="20%">Vendor/Owner</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="topTable">
-      <th scope="row"><input type="text" class="form-control form-control-sm" id="mr" placeholder=""></th>
-      <td><input type="text" class="form-control form-control-sm" id="mdate" placeholder=""></td>
-      <td><input type="text" class="form-control form-control-sm" id="oname" placeholder=""></td>
-      <td><input type="text" class="form-control form-control-sm" id="oname" placeholder=""></td>
-      <td><input type="text" class="form-control form-control-sm" id="oname" placeholder=""></td>
-    </tr>
-  </tbody>
-</table>
-          <!-- <div class="form-group col-md-3">
-            <label for="mr" class="col-form-label-sm">Odo-meter Reading</label>
-            <input type="text" class="form-control form-control-sm" id="mr" placeholder="">
+      <div class="col-md-4">
+        <p class="font-weight-bold mb-0" style="font-size: 14px">TYRES & WEAR</p>
+        <div class="form-row">
+          <div class="form-group col-md-2">
           </div>
           <div class="form-group col-md-2">
-            <label for="mdate" class="col-form-label-sm">Date</label>
-            <input type="text" class="form-control form-control-sm" id="mdate" placeholder="">
-          </div>
-          <div class="form-group col-md-3">
-            <label for="oname" class="col-form-label-sm">Name</label>
-            <input type="text" class="form-control form-control-sm" id="oname" placeholder="">
           </div>
           <div class="form-group col-md-2">
-            <label for="oname" class="col-form-label-sm">Previous Owners</label>
-            <input type="text" class="form-control form-control-sm" id="oname" placeholder="">
           </div>
           <div class="form-group col-md-2">
-            <label for="oname" class="col-form-label-sm">Vendor/Owner</label>
-            <input type="text" class="form-control form-control-sm" id="oname" placeholder="">
-          </div> -->
+          </div>
+          <div class="form-group col-md-2">
+            <label for="type" class="col-form-label-sm mb-2">FRONT</label>
+          </div>
+          <div class="form-group col-md-2">
+          </div>
+        </div>
+        <div class="form-row mb-0">
+          <div class="form-group col-md-2">
+            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE</label>
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="type" class="col-form-label-sm mb-2">REAR</label>
+          </div>
+          <div class="form-group col-md-2">
+          </div>
+          <div class="form-group col-md-2">
+            <!-- <label for="type">&nbsp;</label> -->
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+        </div>
+        <div class="form-row  mb-1">
+          <div class="form-group col-md-2">
+            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE </label>
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.size" name="type" placeholder="">
+          </div>
+        </div>
+        <div class="form-row  mb-1">
+          <div class="form-group col-md-2">
+            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">QC </label>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">CHECKED</label>
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.sizeQc" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.sizeQc" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.sizeQc" name="type" placeholder="">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.sizeQc" name="type" placeholder="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <!-- <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label> -->
+          </div>
+          <div class="form-group col-md-2">
+            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label>
+          </div>
+          <div class="form-group col-md-2">
+          </div>
+          <div class="form-group col-md-2">
+          </div>
+          <div class="form-group col-md-2">
+            <label style="font-size: 12px !important;">SPARE%</label>
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.spare" name="type" placeholder="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" style="margin-top:5px">
+        <div style="display:flex">
+          <div class="col-md-4">
+            <input class="dontPrint" type='file' (change)="onSelectFile($event)">
+            <div class="card">
+              <img class="card-img-top" [src]="image1" height="140" alt="image 1">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <input class="dontPrint" type='file' (change)="onSelectFile2($event)">
+            <div class="card">
+              <img class="card-img-top" [src]="image2" height="140" alt="image 2">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <input class="dontPrint" type='file' (change)="onSelectFile3($event)">
+            <div class="card">
+              <img class="card-img-top" [src]="image3" height="140" alt="image 3">
+            </div>
+          </div>
         </div>
 
-      </div>
-
-
-    </div>
-  </div>
-
-  <!-- I hereby declare and affirm that i'm the current owner -->
-<div class="form-row">
-<div class="col-md-4">
-  <p class="font-weight-bold mb-0" style="font-size: 14px">TYRES & WEAR</p>
-  <div class="form-row">
-    <div class="form-group col-md-2">
-    </div>
-    <div class="form-group col-md-2">
-    </div>
-    <div class="form-group col-md-2">
-    </div>
-    <div class="form-group col-md-2">
-    </div>
-    <div class="form-group col-md-2">
-         <label for="type" class="col-form-label-sm mb-2">FRONT</label>
-    </div>
-    <div class="form-group col-md-2">
-    </div>
-  </div>
-  <div class="form-row mb-0">
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;" >SIZE</label>
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-       <label for="type" class="col-form-label-sm mb-2">REAR</label>
-    </div>
-    <div class="form-group col-md-2">
-    </div>
-    <div class="form-group col-md-2">
-      <!-- <label for="type">&nbsp;</label> -->
-      <input type="text" class="form-control form-control-sm"  id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-  </div>
-  <div class="form-row  mb-1">
-    <div class="form-group col-md-2">
-      <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE </label>
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-  </div>
-  <div class="form-row  mb-1">
-    <div class="form-group col-md-2">
-        <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">QC </label>
-    </div>
-    <div class="form-group col-md-2">
-        <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">CHECKED</label>
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-        <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-2">
-      <!-- <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label> -->
-    </div>
-    <div class="form-group col-md-2">
-        <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">PASSED </label>
-    </div>
-    <div class="form-group col-md-2">
-    </div>
-    <div class="form-group col-md-2">
-    </div>
-    <div class="form-group col-md-2">
-    <label style="font-size: 12px !important;">SPARE%</label>
-    </div>
-    <div class="form-group col-md-2">
-      <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-    </div>
-  </div>
-</div>
-<div class="col-md-8" style="margin-top:5px">
-  <div style="display:flex">
-    <div class="col-md-4">
-      <input class="dontPrint" type='file' (change)="onSelectFile($event)">
-      <div class="card">
-      <img class="card-img-top" [src]="image1" height="140" alt="image 1">
+        <div class="col-md-8">
+          <input class="dontPrint" type='file' (change)="onSelectFile4($event)">
+          <div class="card">
+            <img class="card-img-top" [src]="image4" height="60" width="300" alt="image 3">
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <input class="dontPrint" type='file' (change)="onSelectFile2($event)">
-      <div class="card">
-      <img class="card-img-top" [src]="image2" height="140" alt="image 2">
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">ENGINE MOTOR</label>
+        <input type="text" class="form-control form-control-sm" name="type" placeholder="">
       </div>
-    </div>
-    <div class="col-md-4">
-      <input class="dontPrint" type='file' (change)="onSelectFile3($event)">
-      <div class="card">
-      <img class="card-img-top" [src]="image3" height="140" alt="image 3">
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-8">
-    <input class="dontPrint" type='file' (change)="onSelectFile4($event)">
-    <div class="card">
-      <img class="card-img-top" [src]="image4" height="60" width="300" alt="image 3">
-    </div>
-  </div>
-</div>
-</div>
-<div class="form-row">
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">ENGINE MOTOR</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">TYPE OF FUEL</label>
-    <div class="form-group">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected></option>
-        <option value="1">PATROL</option>
-        <option value="2">DIESEL</option>
-        <option value="3">GASS</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">FUAL TYPE</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">REPLACED ON</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">RE-BUILT ON</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  </div>
-  <div class="form-row">
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">PAINT OR FISISH</label>
-    <div class="form-group">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected></option>
-        <option value="1">GOOD</option>
-        <option value="2">FAIR</option>
-        <option value="3">POOR</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">BODY COLOUR</label>
-    <input type="text" class="form-control form-control-sm" id="type" placeholder="">
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">CHASSIS OR UNDERSIDE</label>
-    <div class="form-group">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected></option>
-        <option value="1">GOOD</option>
-        <option value="2">FAIR</option>
-        <option value="3">POOR</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group col-md-2">
-    <label for="type" class="col-form-label-sm">COACH OR BODY WORK</label>
-<!--    <input type="text" class="form-control form-control-sm" id="type" placeholder="">-->
-    <div class="form-group">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected></option>
-        <option value="1">GOOD</option>
-        <option value="2">FAIR</option>
-        <option value="3">POOR</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group col-md-3">
-    <label for="type" class="col-form-label-sm">INTERNAL TRIM</label>
-    <div class="form-group">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Leather
-        </label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Viny
-        </label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Cloth
-        </label>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-<div class="form-row selcton2">
-  <div class="col-md-6">
-      <p class="font-weight-bold mb-0" style="font-size: 14px">GEAR BOX</p>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">TRANSMISSION CLUTCH</label>
-      <div class="col-sm-6">
-<!--        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">-->
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">TYPE OF FUEL</label>
         <div class="form-group">
           <select class="form-select form-select-sm" aria-label=".form-select-sm example">
             <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
+            <option value="1">PATROL</option>
+            <option value="2">DIESEL</option>
+            <option value="3">GASS</option>
           </select>
         </div>
       </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">FUAL TYPE</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.fuelType" name="type" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">REPLACED ON</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.replacedOn" name="type" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">RE-BUILT ON</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.rebuiltOn" name="type" placeholder="">
+      </div>
     </div>
-    <div class="form-group row">
-      <label for="gb" class="col-sm-6 col-form-label-sm">GEAR BOX</label>
-      <div class="col-sm-6">
-<!--        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">PAINT OR FINISH</label>
+        <div class="form-group">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="paintOrFinish" [(ngModel)]="valuation.paintOrFinish">
+            <option selected></option>
+            <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">BODY COLOUR</label>
+        <input type="text" class="form-control form-control-sm" name="type" placeholder="">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">CHASSIS OR UNDERSIDE</label>
         <div class="form-group">
           <select class="form-select form-select-sm" aria-label=".form-select-sm example">
             <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
+            <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
           </select>
         </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="gb" class="col-sm-6 col-form-label-sm">SHAFTIG</label>
-      <div class="col-sm-6">
-<!--        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+      <div class="form-group col-md-2">
+        <label for="type" class="col-form-label-sm">COACH OR BODY WORK</label>
+        <!--    <input type="text" class="form-control form-control-sm" name="type" placeholder="">-->
         <div class="form-group">
           <select class="form-select form-select-sm" aria-label=".form-select-sm example">
             <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
+            <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
           </select>
         </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="gb" class="col-sm-6 col-form-label-sm">DIFF</label>
-      <div class="col-sm-6">
-<!--        <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
+      <div class="form-group col-md-3">
+        <label for="type" class="col-form-label-sm">INTERNAL TRIM</label>
         <div class="form-group">
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
-          </select>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Leather
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Viny
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Cloth
+            </label>
+          </div>
         </div>
       </div>
     </div>
-    <div class="form-group row">
-      <label for="gb" class="col-sm-6 col-form-label-sm">G:SELECTION</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="gb" class="col-sm-6 col-form-label-sm">ROAD TEST DONE ON</label>
-      <div class="col-sm-6">
-        <input type="date" class="form-control form-control-sm" id="gb" placeholder="">
-      </div>
-    </div>
-    <p class="font-weight-bold mb-0" style="font-size: 14px">ELECTRICAL</p>
 
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">S. STARTER</label>
-        <div class="col-sm-6">
-<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
-          <div class="form-group">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected></option>
-              <option value="1">GOOD</option>
-              <option value="2">FAIR</option>
-              <option value="3">POOR</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">VIPERS</label>
-        <div class="col-sm-6">
-<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
-          <div class="form-group">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected></option>
-              <option value="1">GOOD</option>
-              <option value="2">FAIR</option>
-              <option value="3">POOR</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">OBLIGATORY LIGHTS</label>
-        <div class="col-sm-6">
-<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
-          <div class="form-group">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected></option>
-              <option value="1">GOOD</option>
-              <option value="2">FAIR</option>
-              <option value="3">POOR</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">HORNS</label>
-        <div class="col-sm-6">
-<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
-          <div class="form-group">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected></option>
-              <option value="1">GOOD</option>
-              <option value="2">FAIR</option>
-              <option value="3">POOR</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">MEETERS</label>
-        <div class="col-sm-6">
-<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
-          <div class="form-group">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected></option>
-              <option value="1">GOOD</option>
-              <option value="2">FAIR</option>
-              <option value="3">POOR</option>
-            </select>
-          </div>
-        </div>
-      </div><p class="font-weight-bold mb-0" style="font-size: 14px">GENERAL MAINTENANCE STANDARD</p><div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">MECHANICAL</label>
-        <div class="col-sm-6">
-<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
-          <div class="form-group">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected></option>
-              <option value="1">GOOD</option>
-              <option value="2">FAIR</option>
-              <option value="3">POOR</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">COACH OR BODY WOORX</label>
-        <div class="col-sm-6">
-<!--          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">-->
-          <div class="form-group">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected></option>
-              <option value="1">GOOD</option>
-              <option value="2">FAIR</option>
-              <option value="3">POOR</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">DATE OF IMPORT</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">DATE OF CLEARING</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="gb" class="col-sm-6 col-form-label-sm">COUNTRY USED IN</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" id="gb" placeholder="">
-        </div>
-      </div>
-  </div>
 
-  <div class="col-md-6" style="margin-top:30px">
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">FUEL CONS</label>
-      <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">FRONT SUSPENSON</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">REAR SUSPENSON</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">STEERING</label>
-      <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">FOOT BREAKE</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">PARKING BREAKE</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected></option>
-            <option value="1">GOOD</option>
-            <option value="2">FAIR</option>
-            <option value="3">POOR</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">REPAIR NEEED WITHING A YEAR</label>
-      <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">BODY PARTS REPLACED</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="g1">
-            <label class="form-check-label" for="g1">
-              YES
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g2">
-            <label class="form-check-label" for="g2">
-              NO
-            </label>
+    <div class="form-row selcton2">
+      <div class="col-md-6">
+        <p class="font-weight-bold mb-0" style="font-size: 14px">GEAR BOX</p>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">TRANSMISSION CLUTCH</label>
+          <div class="col-sm-6">
+            <!--        <input type="text" class="form-control form-control-sm" name="tc" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" >
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">ACCIDENTS</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="g3">
-            <label class="form-check-label" for="g3">
-              YES
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g4">
-            <label class="form-check-label" for="g4">
-              NO
-            </label>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">GEAR BOX</label>
+          <div class="col-sm-6">
+            <!--        <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">WRITE OFF BY INSURERS</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="g5">
-            <label class="form-check-label" for="g5">
-              YES
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g6">
-            <label class="form-check-label" for="g6">
-              NO
-            </label>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">SHAFTIG</label>
+          <div class="col-sm-6">
+            <!--        <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  <div class="form-group row">
-    <label for="tc" class="col-sm-6 col-form-label-sm">COMMENTS</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="tc" class="col-sm-6 col-form-label-sm">IMPACT NO GOVERMENT POLICIES</label>
-    <div class="col-sm-6">
-      <div class="form-group">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g7">
-          <label class="form-check-label" for="g7">
-            YES
-          </label>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">DIFF</label>
+          <div class="col-sm-6">
+            <!--        <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="g8">
-          <label class="form-check-label" for="g8">
-            NO
-          </label>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">G:SELECTION</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="tc" class="col-sm-6 col-form-label-sm">JUST LOW</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="tc" class="col-sm-6 col-form-label-sm">SEATING</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" id="tc" placeholder="">
-    </div>
-  </div>
-    <p class="font-weight-bold mb-0" style="font-size: 14px">AVAILABILITY OF BODY PARTS</p>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">ROAD TEST DONE ON</label>
+          <div class="col-sm-6">
+            <input type="date" class="form-control form-control-sm" name="gb" placeholder="">
+          </div>
+        </div>
+        <p class="font-weight-bold mb-0" style="font-size: 14px">ELECTRICAL</p>
 
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">BODY PARTS</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g9">
-            <label class="form-check-label" for="g9">
-              AVAILABLE
-            </label>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">S. STARTER</label>
+          <div class="col-sm-6">
+            <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g10">
-            <label class="form-check-label" for="g10">
-              SCARCE
-            </label>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">VIPERS</label>
+          <div class="col-sm-6">
+            <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">OBLIGATORY LIGHTS</label>
+          <div class="col-sm-6">
+            <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">HORNS</label>
+          <div class="col-sm-6">
+            <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">MEETERS</label>
+          <div class="col-sm-6">
+            <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <p class="font-weight-bold mb-0" style="font-size: 14px">GENERAL MAINTENANCE STANDARD</p>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">MECHANICAL</label>
+          <div class="col-sm-6">
+            <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">COACH OR BODY WOORX</label>
+          <div class="col-sm-6">
+            <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">DATE OF IMPORT</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="gb" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">DATE OF CLEARING</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="gb" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gb" class="col-sm-6 col-form-label-sm">COUNTRY USED IN</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="gb" placeholder="">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" style="margin-top:30px">
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">FUEL CONS</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="tc" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">FRONT SUSPENSON</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">REAR SUSPENSON</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">STEERING</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="tc" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">FOOT BRAKE</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">PARKING BRAKE</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected></option>
+                <option  *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">REPAIR NEED WITHING A YEAR</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="tc" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">BODY PARTS REPLACED</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g1">
+                <label class="form-check-label" for="g1">
+                  YES
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g2">
+                <label class="form-check-label" for="g2">
+                  NO
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">ACCIDENTS</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g3">
+                <label class="form-check-label" for="g3">
+                  YES
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g4">
+                <label class="form-check-label" for="g4">
+                  NO
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">WRITE OFF BY INSURERS</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g5">
+                <label class="form-check-label" for="g5">
+                  YES
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g6">
+                <label class="form-check-label" for="g6">
+                  NO
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">COMMENTS</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="tc" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">IMPACT NO GOVERNMENT POLICIES</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g7">
+                <label class="form-check-label" for="g7">
+                  YES
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g8">
+                <label class="form-check-label" for="g8">
+                  NO
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">JUST LOW</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="tc" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">SEATING</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" name="tc" placeholder="">
+          </div>
+        </div>
+        <p class="font-weight-bold mb-0" style="font-size: 14px">AVAILABILITY OF BODY PARTS</p>
+
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">BODY PARTS</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g9">
+                <label class="form-check-label" for="g9">
+                  AVAILABLE
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g10">
+                <label class="form-check-label" for="g10">
+                  SCARCE
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">ENGINE PARTS</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g11">
+                <label class="form-check-label" for="g11">
+                  AVAILABLE
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g12">
+                <label class="form-check-label" for="g12">
+                  SCARCE
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tc" class="col-sm-6 col-form-label-sm">ACCESSORIES</label>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g13">
+                <label class="form-check-label" for="g13">
+                  AVAILABLE
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="g13">
+                <label class="form-check-label" for="g13">
+                  SCARCE
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">ENGINE PARTS</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g11">
-            <label class="form-check-label" for="g11">
-              AVAILABLE
-            </label>
+    <div class="form-row">
+      <div class="col-md-12" style="padding-bottom:2px">
+        <div class="form-group row font-weight-bold selcton2">
+          <label for="gb" class="col-sm-3 col-form-label-sm font-weight-bold">EXTRAS</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control form-control-sm font-weight-bold" [(ngModel)]="valuation.extras" name="gb" placeholder="">
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g12">
-            <label class="form-check-label" for="g12">
-              SCARCE
-            </label>
+          <label for="tc" class="col-sm-3 col-form-label-sm font-weight-bold">ADDITIONAL COMMENTS</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control form-control-sm font-weight-bold" [(ngModel)]="valuation.additionalComment" style="height:50px" name="tc"
+                   placeholder="">
           </div>
         </div>
       </div>
     </div>
-    <div class="form-group row">
-      <label for="tc" class="col-sm-6 col-form-label-sm">ACCESSORIES</label>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g13">
-            <label class="form-check-label" for="g13">
-              AVAILABLE
-            </label>
+    <div class="form-row border-top border-primary" style="padding-top:2px;">
+      <div class="col-md-12">
+        <div class="form-group row font-weight-bold">
+          <label for="tc" class="col-sm-3 col-form-label-sm">MARKET VALUE (Rs.)</label>
+          <div class="col-sm-3">
+            <input type="number" class="form-control form-control-sm font-weight-bold" [(ngModel)]="valuation.marketValues" name="marketValues" placeholder="">
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="g13">
-            <label class="form-check-label" for="g13">
-              SCARCE
-            </label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm font-weight-bold" [(ngModel)]="valuation.marketValuesWord" name="marketValuesWord" placeholder="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group row font-weight-bold">
+          <label for="tc" class="col-sm-3 col-form-label-sm">FORCED SALE VALUE (Rs.)</label>
+          <div class="col-sm-3">
+            <input type="number" class="form-control form-control-sm font-weight-bold" [(ngModel)]="valuation.forcedSaleValue" name="forcedSaleValue" placeholder="">
+          </div>
+          <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm font-weight-bold" [(ngModel)]="valuation.forcedSaleValueWord" name="forcedSaleValueWord" placeholder="">
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="form-row">
-<div class="col-md-12" style="padding-bottom:2px">
-  <div class="form-group row font-weight-bold selcton2">
-      <label for="gb" class="col-sm-3 col-form-label-sm font-weight-bold">EXTRAS</label>
-      <div class="col-sm-9">
-        <input type="text" class="form-control form-control-sm font-weight-bold" id="gb" placeholder="">
+    <div class="form-row ">
+      <div class="col-md-12">
+        <p class="text-uppercase" style="font-size: 13px !important; margin-bottom: 0">declarations of valuer. i here by
+          confirm that information stated is correct as per
+          inspections made by me and to the best of my knowledge i also have given the above valuation after
+          considering all relevant factors which affects the value of the vahicle to the best of my experience and
+          knowledge</p>
       </div>
-    <label for="tc" class="col-sm-3 col-form-label-sm font-weight-bold">ADITION COMMENTS</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control form-control-sm font-weight-bold" style="height:50px" id="tc" placeholder="">
+      <div class="col-md-3" style="font-size: 13px !important; margin-top:70px">
+        <p class="text-uppercase">Signature of the valuer</p>
+      </div>
+      <div class="col-md-2" style="font-size: 13px !important;margin-top:70px">
+
+      </div>
+      <div class="col-md-3" style=" font-size: 13px !important; margin-top:70px">
+        <p class="text-uppercase">Prepared By</p>
+
+      </div>
+      <div class="col-md-4 text-center">
+        <p class="text-uppercase " style="margin: 0">Date</p>
+        <ngx-barcode [bc-value]="reportNo" [bc-height]="60" [bc-display-value]="false"></ngx-barcode>
+        <!-- <img src="../../assets/Barcode.png" height="60"/> -->
+      </div>
+
     </div>
-  </div>
-</div>
-</div>
-<div class="form-row border-top border-primary" style="padding-top:2px;">
-  <div class="col-md-12">
-    <div class="form-group row font-weight-bold">
-      <label for="tc" class="col-sm-3 col-form-label-sm">MARKET VALUE (Rs.)</label>
-      <div class="col-sm-3">
-        <input type="number" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
-      </div>
-      <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
-      </div>
+
+    <div class="actionBtn dontPrint">
+      <button class="btn btn-secondary dontPrint" (click)="onPrint()"> Print</button>
+      <button type="submit" class="btn btn-primary dontPrint" style="margin-left:10px"> Save</button>
     </div>
-  </div>
-  <div class="col-md-12">
-    <div class="form-group row font-weight-bold">
-      <label for="tc" class="col-sm-3 col-form-label-sm">FORCED SALE VALUE (Rs.)</label>
-      <div class="col-sm-3">
-        <input type="number" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
-      </div>
-      <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm font-weight-bold" id="tc" placeholder="">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="form-row doPrint">
-  <div class="col-md-12">
-    <p class="text-uppercase" style="font-size: 13px !important; margin-bottom: 0">declarations of valuer. i here by confirm that information stated is correct as per
-    inspections made by me and to the best of my knowledge i also have given the above valuation after
-   considering all relevant factors which affects the value of the vahicle to the best of my experience and knowledge</p>
-  </div>
-  <div class="col-md-3" style="font-size: 13px !important; margin-top:70px">
-    <p class="text-uppercase">Signature of the valuer</p>
-  </div>
-  <div class="col-md-2" style="font-size: 13px !important;margin-top:70px">
-
-  </div>
-  <div class="col-md-3" style=" font-size: 13px !important; margin-top:70px">
-    <p class="text-uppercase">Prepared By</p>
-
-  </div>
-  <div class="col-md-4 text-center">
-    <p class="text-uppercase " style="margin: 0">Date</p>
-    <ngx-barcode [bc-value]="reportNo" [bc-height]="60" [bc-display-value]="false"></ngx-barcode>
-    <!-- <img src="../../assets/Barcode.png" height="60"/> -->
-  </div>
-
-</div>
-
-<div class="actionBtn">
- <button class="btn btn-secondary dontPrint"  (click)="onPrint()"> Print </button>
- <button type="submit" class="btn btn-primary dontPrint" style="margin-left:10px"> Save</button>
- </div>
-</form>
+  </form>
 </div>

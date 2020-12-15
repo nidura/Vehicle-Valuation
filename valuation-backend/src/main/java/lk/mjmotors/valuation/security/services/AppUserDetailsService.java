@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import lk.mjmotors.valuation.security.dao.UserRepository;
+import lk.mjmotors.valuation.security.repository.UserRepository;
 import lk.mjmotors.valuation.security.entities.User;
 
 /** @author Kavish Manjitha Perera */

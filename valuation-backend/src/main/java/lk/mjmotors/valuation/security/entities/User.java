@@ -2,16 +2,8 @@ package lk.mjmotors.valuation.security.entities;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.context.annotation.Scope;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -27,25 +19,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /** @author Kavish Manjitha Perera */
-@Entity
+//@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@DynamicUpdate
 @Builder
 @Document("user")
 @Scope("session")
 public class User implements UserDetails {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   private String firstName;
   private String lastName;
   private String email;
 
-  @Column(name = "user_name", unique = true)
   private String username;
 
   @JsonProperty(access = Access.WRITE_ONLY)

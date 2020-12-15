@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ValuationModel} from "../../model/valuation.model";
 // import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
@@ -12,16 +13,31 @@ export class ValuationComponent {
   image3: any;
   image4: any;
   barcodeValue: any;
-  regNo: any;
+
+  public valuation: ValuationModel = new ValuationModel();
+  // public options = [
+  //   {id: 1, name: 'GOOD'},
+  //   {id: 2, name: 'FAIR'},
+  //   {id: 3, name: 'POOR'}
+  // ];
+
+  public options: any;
 
   reportNo: any;
 
   // contact : {id, name, description, email} = {id: null, name: "", description: "", email: ""};
 
   constructor() {
+
   }
 
   ngOnInit(): void {
+    // this.valuation.reportNo = "12312312";
+    this.options = [
+      {id: 'GOOD', name: 'GOOD'},
+      {id: 'FAIR', name: 'FAIR'},
+      {id: 'POOR', name: 'POOR'}
+    ];
   }
 
   createContact() {
@@ -32,7 +48,7 @@ export class ValuationComponent {
   }
 
   onPrint() {
-    window.print();
+    // window.print();
   }
 
   // tslint:disable-next-line:typedef
@@ -95,4 +111,9 @@ export class ValuationComponent {
     }
   }
 
+}
+
+interface Option{
+  id: any;
+  name: any;
 }
