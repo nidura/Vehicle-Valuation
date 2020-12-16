@@ -12,6 +12,7 @@ export class ValuationComponent {
   image2: any;
   image3: any;
   image4: any;
+  image5: any;
   barcodeValue: any;
   date: any;
 
@@ -110,6 +111,21 @@ export class ValuationComponent {
       reader.onload = (event) => { // called once readAsDataURL is completed
         // @ts-ignore
         this.image4 = event.target.result;
+      };
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  onSelectFile5(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      // tslint:disable-next-line:no-shadowed-variable
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        // @ts-ignore
+        this.image5 = event.target.result;
       };
     }
   }
