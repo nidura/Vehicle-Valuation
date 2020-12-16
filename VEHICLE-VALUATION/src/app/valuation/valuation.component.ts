@@ -13,6 +13,7 @@ export class ValuationComponent {
   image3: any;
   image4: any;
   barcodeValue: any;
+  date: any;
 
   public valuation: ValuationModel = new ValuationModel();
   // public options = [
@@ -38,6 +39,8 @@ export class ValuationComponent {
       {id: 'FAIR', name: 'FAIR'},
       {id: 'POOR', name: 'POOR'}
     ];
+
+    this.date = new Date();
   }
 
   createContact() {

@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   login = () => {
-    if (this.user.username === 'thilak' && this.user.password === 'MjThilakM') {
+    if (this.user.username === 'admin' && this.user.password === 'admin') {
       this.router.navigate(['/valuation']);
     } else {
       this.errorMessage = 'Username or password is incorrect';
