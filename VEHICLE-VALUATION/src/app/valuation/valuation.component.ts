@@ -25,7 +25,7 @@ export class ValuationComponent {
 
   public options: any;
 
-  reportNo: any;
+  // reportNo: any;
 
   // contact : {id, name, description, email} = {id: null, name: "", description: "", email: ""};
 
@@ -44,8 +44,8 @@ export class ValuationComponent {
     this.date = new Date();
   }
 
-  createContact() {
-    // console.log(this.contact);
+  save() {
+    console.log(this.valuation);
     // this.dataService.createContact(this.contact);
     // this.contact = {id: null, name: "", description: "", email: ""};
 
