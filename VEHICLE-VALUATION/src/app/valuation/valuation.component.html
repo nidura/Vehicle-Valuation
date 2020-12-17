@@ -64,8 +64,8 @@
   </div>
 
   <form style="margin-left: 57px;">
-    <div class="form-row hideInputBorder doPrint">
-      <p class="mb-0">
+    <div class="form-row hideInputBorder">
+      <p class="mb-0 doPrint">
         This Report is confidential and for guideline of address only and not be used for any other purpose
         or distributed to any other party or be published in any form inspection is necessarily superficial and no
         dismantling nor
@@ -181,7 +181,7 @@
 
     <!-- I hereby declare and affirm that i'm the current owner -->
     <div class="form-row">
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <p class="font-weight-bold mb-0" style="font-size: 14px">TYRES & WEAR</p>
         <div class="form-row">
           <div class="form-group col-sm-2">
@@ -192,7 +192,7 @@
           </div>
           <div class="form-group col-sm-2">
           </div>
-          <div class="form-group col-sm-2">
+          <div class="form-group col-sm-3">
             <label for="type" class="col-form-label-sm mb-2">FRONT</label>
           </div>
           <div class="form-group col-sm-2">
@@ -200,10 +200,10 @@
         </div>
         <div class="form-row mb-0">
           <div class="form-group col-sm-2">
-            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE</label>
+            <label for="type" class="col-form-label-sm" style="font-size: 11px !important;">SIZE</label>
           </div>
           <div class="form-group col-sm-2">
-            <input type="text" class="form-control form-control-sm" name="type" placeholder="">
+            <input type="text" class="form-control form-control-sm p-0" name="type" placeholder="">
           </div>
           <div class="form-group col-sm-2">
             <label for="type" class="col-form-label-sm mb-2">REAR</label>
@@ -220,10 +220,10 @@
         </div>
         <div class="form-row  mb-1">
           <div class="form-group col-sm-2">
-            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">SIZE </label>
+            <label for="type" class="col-form-label-sm" style="font-size: 11px !important;">SIZE QC</label>
           </div>
           <div class="form-group col-sm-2">
-            <input type="text" class="form-control form-control-sm" name="type" placeholder="">
+            <input type="text" class="form-control form-control-sm p-0" name="type" placeholder="">
           </div>
           <div class="form-group col-sm-2">
             <input type="text" class="form-control form-control-sm" name="type" placeholder="">
@@ -240,7 +240,6 @@
         </div>
         <div class="form-row  mb-1">
           <div class="form-group col-sm-2">
-            <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">QC </label>
           </div>
           <div class="form-group col-sm-2">
             <label for="type" class="col-form-label-sm" style="font-size: 12px !important;">CHECKED</label>
@@ -277,21 +276,21 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-8" style="margin-top:5px">
+      <div class="col-sm-7" style="margin-top:5px">
         <div style="display:flex">
-          <div class="col-sm-4">
+          <div class="col-sm-4 p-0">
             <input class="dontPrint" type='file' (change)="onSelectFile($event)">
             <div class="card">
               <img class="card-img-top" [src]="image1" height="140" alt="image 1">
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-4 p-0">
             <input class="dontPrint" type='file' (change)="onSelectFile2($event)">
             <div class="card">
               <img class="card-img-top" [src]="image2" height="140" alt="image 2">
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-4 p-0">
             <input class="dontPrint" type='file' (change)="onSelectFile3($event)">
             <div class="card">
               <img class="card-img-top" [src]="image3" height="140" alt="image 3">
@@ -299,13 +298,13 @@
           </div>
         </div>
         <div style="display:flex">
-        <div class="col-sm-6">
+        <div class="col-sm-6 p-0">
           <input class="dontPrint" type='file' (change)="onSelectFile4($event)">
           <div class="card">
             <img class="card-img-top" [src]="image4" height="60" width="140" alt="image 4">
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 p-0">
           <input class="dontPrint" type='file' (change)="onSelectFile5($event)">
           <div class="card">
             <img class="card-img-top" [src]="image5" height="60" width="140" alt="image 5">
