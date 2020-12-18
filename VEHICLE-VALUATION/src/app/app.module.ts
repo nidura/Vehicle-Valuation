@@ -10,6 +10,7 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {ValuationComponent} from './valuation/valuation.component';
 import {HeaderComponent} from './header/header.component';
+import { ReportviewComponent } from './reportview/reportview.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {HeaderComponent} from './header/header.component';
     AppComponent,
     LoginComponent,
     ValuationComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReportviewComponent
   ],
   imports: [
     BrowserModule,
