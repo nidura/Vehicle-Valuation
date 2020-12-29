@@ -13,7 +13,7 @@
       </div>
       <div class="form-group row">
         <label for="tc" class="col-sm-3 col-form-label-sm" id="contactPerson">Contact Person</label>
-        <div class="col-sm-3">
+        <div class="col-sm-8">
           <input type="text" class="form-control form-control-sm" [(ngModel)]="valuation.contactPerson" name="contactPerson" placeholder="">
         </div>
       </div>
@@ -71,15 +71,15 @@
         or distributed to any other party or be published in any form inspection is necessarily superficial and no
         dismantling nor
         reassembling of any mechanism is implied nor accepted.</p>
-      <div class="form-group row mp-0" style="margin-left: 100px">
+      <div class="form-group row mp-0">
         <label for="timeOfInspection" class="col-sm-5 col-form-label-sm">Time of inspection</label>
         <div class="col-sm-6">
           <input type="text" class="form-control form-control-sm" name="timeOfInspection" [(ngModel)]="valuation.timeOfInspection">
         </div>
       </div>
       <div class="form-group row mp-0">
-        <label for="placeOfInspection" class="col-sm-6 col-form-label-sm">Place of inspection</label>
-        <div class="col-sm-6">
+        <label for="placeOfInspection" class="col-sm-3 col-form-label-sm">Place of inspection</label>
+        <div class="col-sm-6" style="width:500px">
           <input type="text" class="form-control form-control-sm" name="placeOfInspection" [(ngModel)]="valuation.placeOfInspection">
         </div>
       </div>
@@ -102,21 +102,21 @@
         <label for="type" class="col-form-label-sm">Classification</label>
         <input type="text" class="form-control form-control-sm" name="classification" [(ngModel)]="valuation.classification" placeholder="">
       </div>
-      <div class="form-group col-sm-2">
+      <div class="form-group col-sm-1">
         <label for="year" class="col-form-label-sm">Year</label>
         <input type="text" class="form-control form-control-sm" name="year" [(ngModel)]="valuation.year" placeholder="">
       </div>
-      <div class="form-group col-sm-2">
+      <div class="form-group col-sm-3">
         <label for="engNoOrMotorNo" class="col-form-label-sm">Eng no/Motor No</label>
         <input type="text" class="form-control form-control-sm" name="engNoOrMotorNo" [(ngModel)]="valuation.engNoOrMotorNo" placeholder="">
       </div>
-      <div class="form-group col-sm-2">
+      <div class="form-group col-sm-3">
         <label for="chassis" class="col-form-label-sm">Chassis</label>
         <input type="text" class="form-control form-control-sm" name="chassis" [(ngModel)]="valuation.chassis" placeholder="">
       </div>
       <div class="form-group col-sm-2">
         <label for="dateOfReg" class="col-form-label-sm">Date of Reg</label>
-        <input type="text" class="form-control form-control-sm" name="dateOfReg" [(ngModel)]="valuation.dateOfReg" placeholder="">
+        <input style="padding:0px" type="text" class="form-control form-control-sm" name="dateOfReg" [(ngModel)]="valuation.dateOfReg" placeholder="">
       </div>
       <div class="form-group col-sm-2">
         <label for="countryOfOrigin" class="col-form-label-sm">Country Of Origin</label>
@@ -126,7 +126,7 @@
         <label for="bodyLength" class="col-form-label-sm">body Length</label>
         <input type="text" class="form-control form-control-sm" name="bodyLength" [(ngModel)]="valuation.bodyLength" placeholder="">
       </div>
-      <div class="form-group col-sm-2">
+      <div class="form-group col-sm-1">
         <label for="doors" class="col-form-label-sm">Doors</label>
         <input type="text" class="form-control form-control-sm" name="doors" [(ngModel)]="valuation.doors" placeholder="">
       </div>
@@ -467,7 +467,7 @@
         <div class="form-group row">
           <label for="roadTestDoneOn" class="col-sm-6 col-form-label-sm">ROAD TEST DONE ON</label>
           <div class="col-sm-6">
-            <input type="date" class="form-control form-control-sm" name="roadTestDoneOn" placeholder=""  [(ngModel)]="valuation.roadTestDoneOn">
+            <input style="padding:0px"type="date" class="form-control form-control-sm" name="roadTestDoneOn" placeholder=""  [(ngModel)]="valuation.roadTestDoneOn">
           </div>
         </div>
         <p class="font-weight-bold mb-1 mt-1" style="font-size: 14px">ELECTRICAL</p>
@@ -477,7 +477,7 @@
           <div class="col-sm-6">
             <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.sStarter">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.sStarter" name="sStarter">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -489,7 +489,7 @@
           <div class="col-sm-6">
             <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.vipers">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.vipers" name="vipers">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -501,7 +501,7 @@
           <div class="col-sm-6">
             <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.obligatoryLights">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.obligatoryLights" name="obligatoryLights">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -513,7 +513,7 @@
           <div class="col-sm-6">
             <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.horns">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.horns" name="horns">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -525,7 +525,7 @@
           <div class="col-sm-6">
             <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.meters">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.meters" name="meters">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -546,7 +546,7 @@
           <label for="frontSuspension" class="col-sm-6 col-form-label-sm">FRONT SUSPENSON</label>
           <div class="col-sm-6">
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.frontSuspension">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="frontSuspension" [(ngModel)]="valuation.frontSuspension">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -557,7 +557,7 @@
           <label for="rearSuspension" class="col-sm-6 col-form-label-sm">REAR SUSPENSON</label>
           <div class="col-sm-6">
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example"  [(ngModel)]="valuation.rearSuspension">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example"  [(ngModel)]="valuation.rearSuspension" name="rearSuspension">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -574,7 +574,7 @@
           <label for="footBrake" class="col-sm-6 col-form-label-sm">FOOT BRAKE</label>
           <div class="col-sm-6">
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example"  [(ngModel)]="valuation.footBrake">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example"  [(ngModel)]="valuation.footBrake" name="footBrake">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -585,7 +585,7 @@
           <label for="parkingBrake" class="col-sm-6 col-form-label-sm">PARKING BRAKE</label>
           <div class="col-sm-6">
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.parkingBrake">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.parkingBrake" name="parkingBrake">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -597,13 +597,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.bodyPartsReplaced">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.bodyPartsReplaced" name="bodyPartsReplaced">
                 <label class="form-check-label" for="g1">
                   YES
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.bodyPartsReplaced">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.bodyPartsReplaced" name="bodyPartsReplaced">
                 <label class="form-check-label" for="g2">
                   NO
                 </label>
@@ -616,13 +616,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accidents">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accidents" name="accidents">
                 <label class="form-check-label" for="g3">
                   YES
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accidents">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accidents" name="accidents">
                 <label class="form-check-label" for="g4">
                   NO
                 </label>
@@ -635,13 +635,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.writeOffByInsurers">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.writeOffByInsurers" name="writeOffByInsurers">
                 <label class="form-check-label" for="g5">
                   YES
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.writeOffByInsurers">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.writeOffByInsurers"  name="writeOffByInsurers">
                 <label class="form-check-label" for="g6">
                   NO
                 </label>
@@ -654,13 +654,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.impactNoGovernmentPolicies">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.impactNoGovernmentPolicies" name="impactNoGovernmentPolicies">
                 <label class="form-check-label" for="g7">
                   YES
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.impactNoGovernmentPolicies">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.impactNoGovernmentPolicies" name="impactNoGovernmentPolicies">
                 <label class="form-check-label" for="g8">
                   NO
                 </label>
@@ -689,7 +689,7 @@
           <div class="col-sm-6">
             <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.mechanical">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.mechanical" name="mechanical">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -701,7 +701,7 @@
           <div class="col-sm-6">
             <!--          <input type="text" class="form-control form-control-sm" name="gb" placeholder="">-->
             <div class="form-group">
-              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.coachOrBodyWorks">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="valuation.coachOrBodyWorks" name="coachOrBodyWorks">
                 <option selected></option>
                 <option *ngFor="let lang of options" [ngValue]="lang.id">{{lang.name}}</option>
               </select>
@@ -735,13 +735,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox"  [(ngModel)]="valuation.bodyParts">
+                <input class="form-check-input" type="checkbox"  [(ngModel)]="valuation.bodyParts" name="bodyParts">
                 <label class="form-check-label" for="g9">
                   AVAILABLE
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox"  [(ngModel)]="valuation.bodyParts">
+                <input class="form-check-input" type="checkbox"  [(ngModel)]="valuation.bodyParts" name="bodyParts">
                 <label class="form-check-label" for="g10">
                   SCARCE
                 </label>
@@ -754,13 +754,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox"  [(ngModel)]="valuation.engineParts">
+                <input class="form-check-input" type="checkbox"  [(ngModel)]="valuation.engineParts" name="engineParts">
                 <label class="form-check-label" for="g11">
                   AVAILABLE
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.engineParts">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.engineParts" name="engineParts">
                 <label class="form-check-label" for="g12">
                   SCARCE
                 </label>
@@ -773,13 +773,13 @@
           <div class="col-sm-6">
             <div class="form-group">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accessories">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accessories" name="accessories">
                 <label class="form-check-label" for="g13">
                   AVAILABLE
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accessories">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="valuation.accessories" name="accessories">
                 <label class="form-check-label" for="g13">
                   SCARCE
                 </label>
